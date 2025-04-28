@@ -34,7 +34,8 @@ class ContactListActivity : AppCompatActivity(), PersonAdapter.PersonClickListen
 
     private fun setupEventListeners() {
         binding.btnCreatePerson.setOnClickListener {
-            //TODO: Hacer cosas
+            val intent = PersonDetailActivity.detailIntent(this, Person(0, "", ""))
+            startActivity(intent)
         }
     }
 
